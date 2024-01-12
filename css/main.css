@@ -44,6 +44,9 @@ a {
   --spike-color: var(--body-color);
   --spike-height: 10px;
 }
+.hero-section--pricing{
+  padding-bottom: 67px;
+}
 .hero-section::after {
   content: "";
   position: absolute;
