@@ -6,6 +6,7 @@
 body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 img {
   width: 100%;
@@ -15,6 +16,14 @@ ul {
 }
 a {
   text-decoration: none;
+}
+.section {
+  text-align: center;
+}
+.section-title{
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 32px;
 }
 .container {
   position: relative;
@@ -121,4 +130,38 @@ a {
   vertical-align: -35%;
   fill: #008000;
   margin-left: 10px;
+}
+
+/* Advantages section */
+.advantages-section {
+  padding: 72px 0;
+  background: #f3f3f3;
+}
+.advantages-section__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.advantages-section__card {
+  padding: 32px 20px;
+  width: 280px;
+  height: 360px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(29, 30, 38, 0.1), 0px 3px 6px 0px rgba(29, 30, 38, 0.1);
+}
+.advantages-section__card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.advantages-section__card-text {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75;
+}
+.advantages-section__img {
+  max-width: 128px;
+  margin-bottom: 32px;
 }
