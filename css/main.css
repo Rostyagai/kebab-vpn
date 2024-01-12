@@ -13,6 +13,8 @@ body {
 }
 img {
   width: 100%;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 ul {
   list-style: none;
@@ -75,6 +77,9 @@ a {
   /* justify-content: space-between; */
   align-items: center;
   gap: 64px;
+}
+.hero-section__logo-box {
+  -webkit-user-drag: none;
 }
 .hero-section__logo {
   max-width: 177px;
