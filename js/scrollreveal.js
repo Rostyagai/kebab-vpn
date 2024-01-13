@@ -19,6 +19,21 @@ ScrollReveal().reveal(".pricing-section__item", {
   distance: "-50px",
   duration: 2000,
 });
+ScrollReveal().reveal(".payment-section__method", {
+  delay: 500,
+  distance: "-50px",
+  duration: 2000,
+});
+ScrollReveal().reveal(".payment-section__info-box", {
+  delay: 500,
+  distance: "-50px",
+  duration: 2000,
+});
+ScrollReveal().reveal("input", {
+  delay: 500,
+  distance: "-50px",
+  duration: 2000,
+});
 ScrollReveal().reveal(".footer__nav", {
   delay: 300,
   distance: "-50px",
@@ -29,4 +44,3 @@ ScrollReveal().reveal(".footer__nav-box", {
   distance: "-50px",
   duration: 2000,
 });
-

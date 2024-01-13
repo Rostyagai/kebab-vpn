@@ -120,22 +120,144 @@
       </section>
       <section class="payment-section section text-align-left">
         <div class="container container-padding">
-          <div>
-            <p class="section-subtitle text-align-left">Шаг 2:</p>
-            <h2 class="section-title text-align-left mb-8">Введите адрес электронной почты:</h2>
-            <p class="payment-section__text text-align-left">
-              Гарантия конфиденциальности информации: личные сведения не передаются третьим сторонам
-              и используются исключительно для предоставления услуг.
-            </p>
-            <input
-              class="payment-section__email-input"
-              type="email"
-              placeholder="Адрес электронной почты"
-            />
+          <div class="payment-section__container">
+            <div>
+              <p class="section-subtitle text-align-left">Шаг 2:</p>
+              <h2 class="section-title text-align-left mb-8">Введите адрес электронной почты:</h2>
+              <p class="payment-section__text text-align-left">
+                Гарантия конфиденциальности информации: личные сведения не передаются третьим
+                сторонам и используются исключительно для предоставления услуг.
+              </p>
+              <input
+                class="payment-section__email-input"
+                type="email"
+                placeholder="Адрес электронной почты"
+              />
+            </div>
+            <div>
+              <p class="section-subtitle text-align-left">Шаг 3:</p>
+              <h2 class="section-title text-align-left mb-8">
+                Выберите способ оплаты, чтобы купить подписку на VPN-сервис:
+              </h2>
+              <p class="payment-section__text text-align-left">
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#logo-check"></use>
+                </svg>
+                Безопасное оформление. Ваши данные надежно защищены.
+              </p>
+              <div class="payment-section__box">
+                <ul class="payment-section__methods">
+                  <li class="payment-section__method">
+                    <button class="payment-section__method-btn" type="button">
+                      <span>Банковаская карта</span>
+                      <div>
+                        <img
+                          class="payment-section__method-icon--lg"
+                          src="./images/debit-card.jpg"
+                          alt="debit-card"
+                        />
+                        <svg class="payment-section__pin" width="14" height="9">
+                          <use href="./images/icons.svg#logo-pin"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="payment-section__method">
+                    <button class="payment-section__method-btn" type="button">
+                      <span>Paypal</span>
+                      <div>
+                        <img
+                          class="payment-section__method-icon--sm"
+                          src="./images/paypal.jpg"
+                          alt="paypal"
+                        />
+                        <svg class="payment-section__pin" width="14" height="9">
+                          <use href="./images/icons.svg#logo-pin"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="payment-section__method">
+                    <button class="payment-section__method-btn" type="button">
+                      <span>Bitcoin</span>
+                      <div>
+                        <img
+                          class="payment-section__method-icon--sm"
+                          src="./images/bitcoin.jpg"
+                          alt="paypal"
+                        />
+                        <svg class="payment-section__pin" width="14" height="9">
+                          <use href="./images/icons.svg#logo-pin"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </li>
+                  <li class="payment-section__method">
+                    <button class="payment-section__method-btn" type="button">
+                      <span>Другой способ</span>
+                      <div class="justify-end">
+                        <svg class="payment-section__pin" width="14" height="9">
+                          <use href="./images/icons.svg#logo-pin"></use>
+                        </svg>
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+                <div class="payment-section__info-box">
+                  <div class="wrapper">
+                    <p class="payment-section__info-title">Информация по заказу</p>
+                    <div class="payment-section__info-subscription">
+                      <p>12-месячный тариф</p>
+                      <p>$6.95/мес</p>
+                    </div>
+                    <hr class="payment-section__line" />
+                    <div class="flex flex-space-between">
+                      <p class="payment-section__total-text">Всего к оплате</p>
+                      <div class="payment-section__total-box">
+                        <p class="payment-section__total-text">$83.4</p>
+                        <span>Экономия $64</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <footer class="payment-section__total-footer">
+                    <p>
+                      12-месячный тарифный план ExpressVPN оплачивается однократно ($8.32/месяц в
+                      среднем).
+                    </p>
+                    <p>Мы предоставляем 30-дневную гарантию возврата денег.</p>
+                  </footer>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer__nav">
+          <div class="footer__logo-box">
+            <a href="index.html"
+              ><img class="footer__logo" src="./images/logo-kebab.svg" alt="logo"
+            /></a>
+          </div>
+
+          <div class="footer__nav-box">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="#">Главная</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Тарифы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Войти</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Настройки</a></li>
+            </ul>
+            <div class="footer__terms">
+              <a class="footer__link footer__link--small" href="#">Privacy Policy</a>
+              <a class="footer__link footer__link--small" href="#">Terms & Conditons</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/scrollreveal.js"></script>
   </body>
