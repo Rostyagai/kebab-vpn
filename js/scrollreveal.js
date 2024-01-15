@@ -9,6 +9,11 @@ ScrollReveal().reveal(".advantages-section__card", {
   distance: "-50px",
   duration: 2000,
 });
+ScrollReveal().reveal(".login-section__box", {
+  delay: 500,
+  distance: "-50px",
+  duration: 2000,
+});
 ScrollReveal().reveal(".review-section__item", {
   delay: 500,
   distance: "-50px",

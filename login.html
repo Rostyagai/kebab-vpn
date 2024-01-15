@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>LOGIN</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>KebabVPN - Войти в аккаунт</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__container">
+          <nav class="header__nav">
+            <a class="header__logo-box" href="index.html">
+              <img src="./images/logo-kebab.svg" alt="logo-kebab-vpn" class="hero-section__logo"
+            /></a>
+
+            <ul class="header__list">
+              <li class="hero-section__item">
+                <a href="./index.html" class="header__link">Главная</a>
+              </li>
+              <li class="header__item">
+                <a href="./pricing.html" class="header__link">Тарифы</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Войти</a>
+              </li>
+              <li class="header__item">
+                <a href="#" class="header__link">Настройки</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__top-btn" type="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#logo-language"></use>
+            </svg>
+            <div>
+              <span>Русский</span>
+              <svg width="9" height="6"><use href="./images/icons.svg#logo-pin"></use></svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="login-section z-index-1">
+        <div class="container">
+          <div class="login-section__box z-index-1">
+            <h1 class="login-section__title">Вход</h1>
+            <form action="#">
+              <input
+                class="input input--sm mb-18"
+                type="email"
+                placeholder="Адрес электронной почты"
+                required
+              />
+              <input class="input input--sm mb-18" type="password" placeholder="Пароль" required />
+              <button class="btn--normal login-section__btn" type="submit" href="./login.html">
+                Войти в KebabVPN
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#logo-arrow-right"></use>
+                </svg>
+              </button>
+            </form>
+            <footer class="login-section__box-links">
+              <a href="#">Войти по ссылке в письме</a>
+              <div>
+                <a href="#">Забыли пароль?</a><span class="accent">|</span
+                ><a href="#">Нужна помощь?</a>
+              </div>
+              <p>Нет подписки на KebabVPN?<a href="./pricing.html">Купить KebabVPN</a></p>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer footer-spikes-off">
+      <div class="container">
+        <nav class="footer__nav">
+          <div class="footer__logo-box">
+            <a href="index.html"
+              ><img class="footer__logo" src="./images/logo-kebab.svg" alt="logo"
+            /></a>
+          </div>
+
+          <div class="footer__nav-box">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__link" href="#">Главная</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Тарифы</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Войти</a></li>
+              <li class="footer__item"><a class="footer__link" href="#">Настройки</a></li>
+            </ul>
+            <div class="footer__terms">
+              <a class="footer__link footer__link--small" href="#">Privacy Policy</a>
+              <a class="footer__link footer__link--small" href="#">Terms & Conditons</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./js/scrollreveal.js"></script>
+  </body>
 </html>

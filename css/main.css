@@ -58,6 +58,9 @@ a {
 .mb-8 {
   margin-bottom: 8px;
 }
+.mb-18 {
+  margin-bottom: 18px;
+}
 
 .container {
   position: relative;
@@ -123,6 +126,82 @@ a {
   right: 0;
   width: 800px;
   height: 800px;
+  background: rgba(122, 248, 203, 0.3);
+  border-radius: 100%;
+  filter: blur(210px);
+  z-index: -1;
+}
+/* Header */
+.header {
+  padding: 37px 0 88px 0;
+  --spike-height: 10px;
+  --spike-color: #f3f3f3;
+  position: relative;
+}
+.header__container {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 64px;
+}
+.header__logo-box {
+  -webkit-user-drag: none;
+}
+.header__logo {
+  max-width: 177px;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.header__list {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: end;
+}
+.header__link {
+  font-size: 18px;
+  line-height: 2.2;
+  color: #000;
+}
+.header__top-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.header__top-btn div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: var(--spike-height);
+  background: var(--spike-color);
+  bottom: 0;
+  left: 0;
+  transform: rotate(-0.5turn);
+  -webkit-mask-image: url("../images/patterns/triangle.svg");
+  -webkit-mask-size: 180px var(--spike-height);
+}
+.header .container::before {
+  content: "";
+  position: absolute;
+  top: -700px;
+  right: 0;
+  width: 900px;
+  height: 900px;
   background: rgba(122, 248, 203, 0.3);
   border-radius: 100%;
   filter: blur(210px);
@@ -351,7 +430,7 @@ a {
   gap: 24px;
 }
 .pricing-section__item {
-  outline: 1px white solid;
+  outline: 1px transparent solid;
   transition: outline 0.1s ease;
 }
 .pricing-section__item:hover,
@@ -419,22 +498,32 @@ a {
 
 .payment-section {
   padding: 32px 0 120px 0;
+  background: #fff;
+  position: relative;
 }
 .payment-section__container {
   display: flex;
   flex-direction: column;
   gap: 64px;
 }
-.payment-section__email-input {
-  width: 508px;
-  height: 65px;
+.input {
   padding: 22px 20px;
   border-radius: 7px;
   border: 1px solid #dadada;
   outline: none;
   background: #f8f8f8;
 }
-.payment-section__email-input::placeholder {
+.input--xl {
+  width: 100%;
+  max-width: 508px;
+  height: 65px;
+}
+.input--sm {
+  width: 100%;
+  max-width: 400px;
+  height: 65px;
+}
+.input::placeholder {
   font-family: "Montserrat", sans-serif;
   color: #9b9b9b;
   font-size: 16px;
@@ -569,13 +658,71 @@ a {
   max-height: 31px;
 }
 
-/* Footer */
+/* Login section */
+.login-section {
+  padding: 64px 0 230px 0;
+  background: #f3f3f3;
+}
+.login-section__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  max-width: 464px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(29, 30, 38, 0.1), 0px 3px 6px 0px rgba(29, 30, 38, 0.1);
+  margin: 0 auto;
+}
+.login-section__title {
+  color: #000;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: normal;
+}
+.login-section__btn {
+  border: 0;
+  width: 100%;
+}
+.login-section__box-links {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+.login-section__box-links a {
+  color: #008000;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.login-section__box-links .accent {
+  margin: 0 18px;
+  color: #9b9b9b;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: normal;
+}
+.login-section__box-links p {
+  color: #9b9b9b;
+  font-family: Montserrat;
+  font-size: 16px;
+  line-height: normal;
+  display: flex;
+  gap: 7px;
+}
+
 .footer {
   position: relative;
   background: #f3f3f3;
   padding: 40px 0;
   --spike-height: 10px;
 }
+
 .footer::after {
   content: "";
   position: absolute;
@@ -587,6 +734,9 @@ a {
   z-index: 0;
   -webkit-mask-image: url("../images/patterns/triangle.svg");
   -webkit-mask-size: 180px var(--spike-height);
+}
+.footer.footer-spikes-off::after {
+  display: none;
 }
 .footer .container::before {
   content: "";
@@ -601,6 +751,8 @@ a {
 }
 .footer__nav {
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 .footer__logo-box {
   flex-grow: 1;
