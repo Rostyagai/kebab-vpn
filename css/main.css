@@ -668,8 +668,37 @@ a {
 
 /* Login section */
 .login-section {
+  position: relative;
   padding: 64px 0 230px 0;
   background: #f3f3f3;
+}
+.login-section::before {
+  content: "";
+  position: absolute;
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
+  height: 100%;
+  right: -200px;
+  bottom: -100px;
+  z-index: -1;
+
+  background: #fff2d0;
+  filter: blur(160px);
+}
+.login-section .container::after {
+  content: "";
+  position: absolute;
+  max-width: 650px;
+  max-height: 380px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -400px;
+
+  background: rgba(168, 255, 118, 0.3);
+  filter: blur(130px);
+  z-index: -1;
 }
 .login-section__box {
   position: relative;
@@ -806,6 +835,9 @@ a {
   -webkit-mask-size: 180px var(--spike-height);
 }
 .footer.footer-spikes-off::after {
+  display: none;
+}
+.footer .container.footer-bg-off::before {
   display: none;
 }
 .footer .container::before {
