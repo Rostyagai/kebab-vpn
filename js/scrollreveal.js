@@ -1,4 +1,5 @@
-ScrollReveal().reveal("header", { delay: 300, distance: "-10px", duration: 1000 });
+ScrollReveal().reveal(".hero-section__container", { delay: 300, distance: "-10px", duration: 1000 });
+ScrollReveal().reveal(".header__container", { delay: 300, distance: "-10px", duration: 1000 });
 ScrollReveal().reveal(".hero-section__title", { delay: 800, distance: "-20px", duration: 1500 });
 ScrollReveal().reveal(".hero-section__text", { delay: 1000, distance: "-30px", duration: 1500 });
 ScrollReveal().reveal(".hero-section__btn", { delay: 1600, distance: "-50px", duration: 1500 });
@@ -32,6 +33,21 @@ ScrollReveal().reveal(".payment-section__method", {
 ScrollReveal().reveal(".payment-section__info-box", {
   delay: 500,
   distance: "-50px",
+  duration: 2000,
+});
+ScrollReveal().reveal(".help-section__actions-box", {
+  delay: 500,
+  distance: "-50px",
+  duration: 2000,
+});
+ScrollReveal().reveal(".help-section__help-box", {
+  delay: 700,
+  distance: "-50px",
+  duration: 2000,
+});
+ScrollReveal().reveal(".help-section__link", {
+  delay: 700,
+  distance: "-20px",
   duration: 2000,
 });
 ScrollReveal().reveal("input", {
