@@ -75,6 +75,13 @@ a {
   z-index: 1;
 }
 
+.btn {
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+}
 .btn--normal {
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -714,6 +721,68 @@ a {
   line-height: normal;
   display: flex;
   gap: 7px;
+}
+
+/* Help section */
+.help-section {
+  background: #f3f3f3;
+  padding: 64px 0 360px 0;
+}
+.help-section__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 36px;
+  align-items: flex-start;
+}
+.help-section__actions-box {
+  max-width: 282px;
+  width: 100%;
+  padding: 28px 23px;
+  text-align: left;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(29, 30, 38, 0.1), 0px 3px 6px 0px rgba(29, 30, 38, 0.1);
+}
+.help-section__item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.help-section__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.help-section__link {
+  color: #008000;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.help-section__item svg {
+  width: 24px;
+  height: 24px;
+  fill: #9b9b9b;
+}
+.help-section__help-box {
+  padding: 32px;
+  text-align: left;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 1px 3px 0px rgba(29, 30, 38, 0.1), 0px 3px 6px 0px rgba(29, 30, 38, 0.1);
+  max-width: 784px;
+  width: 100%;
+}
+.help-section__title {
+  color: #000;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+.help-section__help-box .help-section__link {
+  line-height: 2.4;
 }
 
 .footer {
