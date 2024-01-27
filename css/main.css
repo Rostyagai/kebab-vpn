@@ -896,6 +896,13 @@ a {
   gap: 36px;
   align-items: flex-start;
 }
+@media (max-width: 940px) {
+  .help-section__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .help-section__actions-box {
   max-width: 282px;
   width: 100%;
@@ -945,6 +952,11 @@ a {
 }
 .help-section__help-box .help-section__link {
   line-height: 2.4;
+}
+@media (max-width: 940px) {
+  .help-section__actions-box {
+    max-width: 784px;
+  }
 }
 
 .footer {
