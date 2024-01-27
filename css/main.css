@@ -62,6 +62,10 @@ a {
   margin-bottom: 18px;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   padding: 0 20px;
   position: relative;
@@ -146,6 +150,11 @@ a {
   --spike-color: #f3f3f3;
   position: relative;
 }
+@media (max-width: 940px) {
+  .header {
+    padding: 37px 0 40px 0;
+  }
+}
 .header__container {
   display: flex;
   /* justify-content: space-between; */
@@ -154,6 +163,10 @@ a {
 }
 .header__logo-box {
   -webkit-user-drag: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .header__logo {
   max-width: 177px;
@@ -168,6 +181,11 @@ a {
   gap: 64px;
   flex-grow: 1;
   justify-content: end;
+}
+@media (max-width: 940px) {
+  .header__list {
+    display: none;
+  }
 }
 .header__link {
   font-size: 18px;
@@ -184,12 +202,51 @@ a {
   outline: none;
   cursor: pointer;
 }
+.lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.lang-btn div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
 .header__top-btn div {
   display: flex;
   align-items: center;
   gap: 8px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+}
+@media (max-width: 940px) {
+  .header__top-btn {
+    display: none;
+  }
+}
+.header__burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.header__burger-btn svg {
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 940px) {
+  .header__burger-btn {
+    display: block;
+  }
 }
 .header::after {
   content: "";
@@ -214,6 +271,51 @@ a {
   border-radius: 100%;
   filter: blur(210px);
   z-index: -1;
+}
+
+/* Header menu */
+.menu {
+  position: fixed;
+  z-index: 1000;
+  background: #f3f3f3;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: 0.5s left;
+}
+.menu.hidden{
+  display: block;
+  left: 100%;
+}
+.menu__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-top: 5rem;
+}
+.menu__link {
+  font-size: 24px;
+  line-height: 2.8;
+  color: #000;
+}
+.menu__close-btn {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: none;
+  border: none;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.menu__close-btn svg {
+  fill: #000;
+  height: 32px;
+  width: 32px;
 }
 /* Hero section  header*/
 .hero-section__top {
@@ -757,6 +859,36 @@ a {
 .help-section {
   background: #f3f3f3;
   padding: 64px 0 360px 0;
+  position: relative;
+  overflow: hidden;
+}
+.help-section::before {
+  content: "";
+  position: absolute;
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
+  height: 100%;
+  right: -200px;
+  bottom: -100px;
+  z-index: 0;
+
+  background: #fff2d0;
+  filter: blur(160px);
+}
+.help-section .container::after {
+  content: "";
+  position: absolute;
+  max-width: 650px;
+  max-height: 380px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -490px;
+
+  background: rgba(168, 255, 118, 0.3);
+  filter: blur(130px);
+  z-index: 0;
 }
 .help-section__container {
   display: flex;

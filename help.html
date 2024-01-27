@@ -48,11 +48,46 @@
               <svg width="9" height="6"><use href="./images/icons.svg#logo-pin"></use></svg>
             </div>
           </button>
+          <button class="header__burger-btn" id="open-menu-btn">
+            <svg><use href="./images/icons.svg#logo-burger"></use></svg>
+          </button>
         </div>
       </div>
     </header>
+    <div class="menu hidden" id="header-menu">
+      <div class="container">
+        <div class="menu__container">
+          <nav class="menu__nav">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="./index.html" class="menu__link">Главная</a>
+              </li>
+              <li class="menu__item">
+                <a href="./pricing.html" class="menu__link">Тарифы</a>
+              </li>
+              <li class="menu__item">
+                <a href="./login.html" class="menu__link">Войти</a>
+              </li>
+              <li class="menu__item">
+                <a href="./help.html" class="menu__link">Помощь</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="lang-btn" type="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#logo-language"></use>
+            </svg>
+            <div>
+              <span>Русский</span>
+              <svg width="9" height="6"><use href="./images/icons.svg#logo-pin"></use></svg>
+            </div>
+          </button>
+          <button class="menu__close-btn" id="close-menu-btn" type="button"><svg><use href="./images/icons.svg#logo-close"></use></svg></button>
+        </div>
+      </div>
+    </div>
     <main>
-      <section class="help-section section">
+      <section class="help-section section z-index-1">
         <div class="container">
           <div class="help-section__container">
             <aside class="help-section__actions-box">
@@ -101,7 +136,7 @@
       </section>
     </main>
     <footer class="footer footer-spikes-off">
-      <div class="container">
+      <div class="container footer-bg-off">
         <nav class="footer__nav">
           <div class="footer__logo-box">
             <a href="index.html"
@@ -126,5 +161,6 @@
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/scrollreveal.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
