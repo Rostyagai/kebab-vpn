@@ -109,6 +109,20 @@ a {
   fill: #008000;
   margin-left: 10px;
 }
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background:#ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(49,255,132,1) 0%, rgba(49,255,187,1) 62%, rgba(83,228,255,1) 100%);
+  border-radius: 10px;
+  max-height: 100px;
+}
+
+
 .hero-section {
   position: relative;
   padding-bottom: 116px;
