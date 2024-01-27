@@ -270,7 +270,20 @@ a {
   background: rgba(122, 248, 203, 0.3);
   border-radius: 100%;
   filter: blur(210px);
+  -webkit-filter: blur(210px);
   z-index: -1;
+}
+@media (max-width: 940px) {
+  .header .container::before {
+    filter: blur(100px);
+    -webkit-filter: blur(100px);
+    top: -15px;
+    right: unset;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background: rgba(122, 248, 203, 0.5);
+  }
 }
 
 /* Header menu */
@@ -284,7 +297,7 @@ a {
   left: 0;
   transition: 0.5s left;
 }
-.menu.hidden{
+.menu.hidden {
   display: block;
   left: 100%;
 }
@@ -862,6 +875,11 @@ a {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 940px) {
+  .help-section {
+    padding: 64px 0 64px 0;
+  }
+}
 .help-section::before {
   content: "";
   position: absolute;
@@ -875,6 +893,7 @@ a {
 
   background: #fff2d0;
   filter: blur(160px);
+  -webkit-filter: blur(160px);
 }
 .help-section .container::after {
   content: "";
@@ -888,7 +907,17 @@ a {
 
   background: rgba(168, 255, 118, 0.3);
   filter: blur(130px);
-  z-index: 0;
+  -webkit-filter: blur(130px);
+  z-index: -1;
+}
+@media (max-width: 940px) {
+  .help-section .container::after {
+    bottom: -50px;
+    filter: blur(130px);
+    -webkit-filter: blur(130px);
+    max-width: 250px;
+    max-height: 380px;
+  }
 }
 .help-section__container {
   display: flex;
@@ -928,6 +957,11 @@ a {
   font-size: 16px;
   line-height: normal;
   text-decoration-line: underline;
+}
+@media (max-width: 940px) {
+  .help-section__link {
+    font-size: 12px;
+  }
 }
 .help-section__item svg {
   width: 24px;
@@ -1000,18 +1034,32 @@ a {
   position: relative;
   z-index: 1;
 }
+@media (max-width: 940px) {
+  .footer__nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
+}
 .footer__logo-box {
   flex-grow: 1;
 }
 .footer__logo {
   max-width: 177px;
 }
-.footer__nav-box {
-}
 .footer__list {
   display: flex;
   gap: 64px;
   margin-bottom: 18px;
+}
+@media (max-width: 940px) {
+  .footer__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+  }
 }
 .footer__link {
   color: #000;
