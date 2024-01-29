@@ -658,6 +658,7 @@ a {
 @media (max-width: 485px) {
   .input{
     padding: 18px 16px;
+    font-size: 16px;
   }
 }
 .input--xl {
@@ -850,6 +851,12 @@ a {
   filter: blur(130px);
   z-index: -1;
 }
+@media (max-width: 485px) {
+  .login-section::before,
+  .login-section .container::after{
+    visibility: hidden;
+  }
+}
 .login-section__box {
   position: relative;
   display: flex;
@@ -1000,6 +1007,11 @@ a {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+@media (max-width: 485px) {
+  .help-section__actions{
+    gap: 16px;
+  }
 }
 .help-section__link {
   color: #008000;
