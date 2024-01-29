@@ -7,7 +7,7 @@
   --body-color: #f3f3f3;
   --spike-width-lg: 180px;
   --spike-width-md: 150px;
-  --spike-width-sm: 100px;
+  --spike-width-sm: 80px;
 }
 body {
   font-size: 16px;
@@ -795,6 +795,9 @@ a {
   outline: none;
   background: #f8f8f8;
 }
+.input:focus{
+  border: 2px solid #24cb61;
+}
 @media (max-width: 485px) {
   .input {
     padding: 18px 16px;
@@ -875,7 +878,13 @@ a {
 
   transition: 0.3s transform, 0.5s box-shadow;
 }
-.payment-section__method-btn:hover {
+@media (max-width: 485px) {
+  .payment-section__method-btn{
+    font-size: 12px;
+  }
+}
+.payment-section__method-btn:hover,
+.payment-section__method-btn:focus {
   transform: translateY(-5px);
   box-shadow: 2px 2px 8px #d4d4d4;
 }
