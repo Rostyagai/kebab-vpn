@@ -87,6 +87,11 @@ a {
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 485px) {
+  .btn{
+    font-size: 14px;
+  }
+}
 .btn--normal {
   display: inline-block;
   font-family: "Roboto", sans-serif;
@@ -111,7 +116,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background:#ffffff;
@@ -309,11 +314,11 @@ a {
   height: 100vh;
   top: 0;
   left: 0;
-  transition: 0.5s left;
+  transition: 0.5s transform;
 }
 .menu.hidden {
   display: block;
-  left: 100%;
+  transform: translateX(100%);
 }
 .menu__container {
   position: relative;
@@ -650,6 +655,11 @@ a {
   outline: none;
   background: #f8f8f8;
 }
+@media (max-width: 485px) {
+  .input{
+    padding: 18px 16px;
+  }
+}
 .input--xl {
   width: 100%;
   max-width: 508px;
@@ -659,6 +669,11 @@ a {
   width: 100%;
   max-width: 400px;
   height: 65px;
+}
+@media (max-width: 485px) {
+  .input--sm{
+    height: 50px;
+  }
 }
 .input::placeholder {
   font-family: "Montserrat", sans-serif;
@@ -800,6 +815,12 @@ a {
   position: relative;
   padding: 64px 0 230px 0;
   background: #f3f3f3;
+  overflow: hidden;
+}
+@media (max-width: 485px) {
+  .login-section{
+    padding: 30px 0 50px 0;
+  }
 }
 .login-section::before {
   content: "";
@@ -866,6 +887,14 @@ a {
   line-height: normal;
   text-decoration-line: underline;
 }
+@media (max-width: 485px) {
+  .login-section__box-links{
+    gap: 10px;
+  }
+  .login-section__box-links a{
+    font-size: 14px;
+  }
+}
 .login-section__box-links .accent {
   margin: 0 18px;
   color: #9b9b9b;
@@ -880,6 +909,13 @@ a {
   line-height: normal;
   display: flex;
   gap: 7px;
+}
+@media (max-width: 485px) {
+  .login-section__box-links p{
+    font-size: 14px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 }
 
 /* Help section */
