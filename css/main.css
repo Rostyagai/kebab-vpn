@@ -269,14 +269,14 @@ a {
   outline: none;
   cursor: pointer;
 }
-.lang-btn div {
+.lang-btn span {
   display: flex;
   align-items: center;
   gap: 8px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }
-.header__top-btn div {
+.header__top-btn span {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -448,7 +448,7 @@ a {
   outline: none;
   cursor: pointer;
 }
-.hero-section__top-btn div {
+.hero-section__top-btn span {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -648,6 +648,7 @@ a {
 }
 .review-section__text {
   font-size: 14px;
+  font-weight: 400;
 }
 @media (max-width: 485px) {
   .review-section__text{
@@ -888,12 +889,12 @@ a {
   transform: translateY(-5px);
   box-shadow: 2px 2px 8px #d4d4d4;
 }
-.payment-section__method-btn div {
+.payment-section__method-btn span {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.payment-section__method-btn div.justify-end {
+.payment-section__method-btn span.justify-end {
   display: flex;
   align-items: center;
   justify-content: flex-end;
