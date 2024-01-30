@@ -1,0 +1,117 @@
+.pricing-section {
+  color: #2c2c2c;
+  background: #f3f3f3;
+  padding: 42px 0 34px 0;
+  position: relative;
+  --spike-height: 10px;
+
+  & .pseudo-container::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--spike-height);
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transform: rotate(-0.5turn);
+    -webkit-mask-image: url("../images/patterns/triangle.svg");
+    -webkit-mask-size: var(--spike-width-lg) var(--spike-height);
+  }
+  @media (max-width: 920px) {
+    & .pseudo-container::after {
+      -webkit-mask-size: var(--spike-width-md) var(--spike-height);
+    }
+  }
+  @media (max-width: 485px) {
+    & .pseudo-container::after {
+      -webkit-mask-size: var(--spike-width-sm) var(--spike-height);
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  @media (max-width: 940px) {
+    &__list {
+      gap: 5px;
+    }
+  }
+  &__item {
+    outline: 1px transparent solid;
+    transition: outline 0.1s ease;
+  }
+  &__item:hover,
+  &__item:active {
+    outline: 4px #24cb61 solid;
+    border-radius: 6px;
+  }
+  &__card {
+    position: relative;
+    padding: 48px 0 32px 0;
+    width: 280px;
+    height: 341px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0px 1px 3px 0px rgba(29, 30, 38, 0.1), 0px 3px 6px 0px rgba(29, 30, 38, 0.1);
+    z-index: 1;
+  }
+  &__card--lg {
+    padding: 48px 0 47px 0;
+    height: 437px;
+  }
+
+  &__period {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+  &__price {
+    color: #000;
+    font-size: 52px;
+    font-weight: 900;
+    line-height: normal;
+  }
+  &__old-price {
+    color: #9b9b9b;
+    font-size: 23px;
+    line-height: normal;
+    text-decoration: line-through;
+  }
+  &__price-info {
+    color: #2c2c2c;
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 1.75;
+    margin-bottom: 42px;
+  }
+  &__price-info--lg {
+    margin-bottom: 61px;
+  }
+  &__info {
+    color: #9b9b9b;
+    font-family: Open Sans;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+  &__info--normal {
+    margin-top: 16px;
+  }
+  &__info--lg {
+    margin-top: 35px;
+  }
+  @media (max-width: 870px) {
+    &__card {
+      width: 250px;
+    }
+  }
+  @media (max-width: 785px) {
+    &__list {
+      flex-direction: column;
+      gap: 18px;
+    }
+  }
+}

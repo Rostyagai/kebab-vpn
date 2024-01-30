@@ -1,0 +1,41 @@
+.review-section {
+  position: relative;
+  padding: 72px 0;
+  --spike-color: var(--body-color);
+  --spike-height: 10px;
+  background: #fff;
+
+  &__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    background: var(--body-color);
+    border-radius: 10px;
+    text-align: left;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 920px) {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  @media (max-width: 485px) {
+    &__text {
+      font-size: 12px;
+    }
+  }
+  &__icon {
+    width: 51px;
+    border-radius: 50%;
+  }
+}
