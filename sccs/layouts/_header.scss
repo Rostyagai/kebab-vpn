@@ -5,7 +5,7 @@
   position: relative;
 
   @media (max-width: 940px) {
-    .header {
+    & {
       padding: 37px 0 40px 0;
     }
   }

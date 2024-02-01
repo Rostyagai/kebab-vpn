@@ -5,7 +5,7 @@
   overflow: hidden;
 
   @media (max-width: 940px) {
-    .help-section {
+    & {
       padding: 64px 0 64px 0;
     }
   }
