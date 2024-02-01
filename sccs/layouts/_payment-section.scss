@@ -89,6 +89,10 @@
     background: #fff;
     padding: 16px 0 0 0;
   }
+  &__info-box.focus {
+    box-shadow: 0px 2px 20px 0px #2ecc71;
+    outline: #2ecc71 solid 1px;
+  }
   &__info-box .wrapper {
     padding: 0 24px;
   }
@@ -126,6 +130,11 @@
     font-size: 18px;
     font-weight: 700;
     line-height: normal; /* 227.778% */
+  }
+    @media (max-width: 920px) {
+    &__total-text {
+      font-size: 17px;
+    }
   }
   &__total-box span {
     color: #2ecc71;

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>KebabVPN - Тарифы</title>
   </head>
-  <body onload="init()">
+  <body>
     <div class="menu hidden" id="header-menu">
       <div class="container">
         <div class="menu__container">
@@ -108,12 +108,16 @@
                 <p class="pricing-section__period">1 месяц</p>
                 <h3 class="pricing-section__price"><span class="up">$</span>12.95</h3>
                 <p class="pricing-section__price-info">в месяц</p>
-                <a class="btn--normal" href="./login.html">
+                <button
+                  class="btn btn--normal"
+                  href="./login.html"
+                  onclick="CalculatePlanTotal(12.95, 1, 0)"
+                >
                   Выбрать план
                   <svg width="24" height="24">
                     <use href="./images/icons.svg#logo-arrow-right"></use>
                   </svg>
-                </a>
+                </button>
                 <p class="pricing-section__info pricing-section__info--normal">
                   30 дней гарантия возврата
                 </p>
@@ -125,12 +129,16 @@
                 <span class="pricing-section__old-price">$12.99</span>
                 <h3 class="pricing-section__price"><span class="up">$</span>6.95</h3>
                 <p class="pricing-section__price-info pricing-section__price-info--lg">в месяц</p>
-                <a class="btn--normal" href="./login.html">
+                <button
+                  class="btn btn--normal"
+                  href="./login.html"
+                  onclick="CalculatePlanTotal(6.95, 12, 12.99)"
+                >
                   Выбрать план
                   <svg width="24" height="24">
                     <use href="./images/icons.svg#logo-arrow-right"></use>
                   </svg>
-                </a>
+                </button>
                 <p class="pricing-section__info pricing-section__info--lg">
                   30 дней гарантия возврата
                 </p>
@@ -141,12 +149,16 @@
                 <p class="pricing-section__period">6 месяцев</p>
                 <h3 class="pricing-section__price"><span class="up">$</span>9.99</h3>
                 <p class="pricing-section__price-info">в месяц</p>
-                <a class="btn--normal" href="./login.html">
+                <button
+                  class="btn btn--normal"
+                  href="./login.html"
+                  onclick="CalculatePlanTotal(9.99, 6, 0)"
+                >
                   Выбрать план
                   <svg width="24" height="24">
                     <use href="./images/icons.svg#logo-arrow-right"></use>
                   </svg>
-                </a>
+                </button>
                 <p class="pricing-section__info pricing-section__info--normal">
                   30 дней гарантия возврата
                 </p>
@@ -236,19 +248,19 @@
                     </button>
                   </li>
                 </ul>
-                <div class="payment-section__info-box">
+                <div class="payment-section__info-box" id="total-plan-box">
                   <div class="wrapper">
                     <p class="payment-section__info-title">Информация по заказу</p>
                     <div class="payment-section__info-subscription">
-                      <p>12-месячный тариф</p>
-                      <p>$6.95/мес</p>
+                      <p id="plan-period">12-месячный тариф</p>
+                      <p id="plan-price">$6.95/мес</p>
                     </div>
                     <hr class="payment-section__line" />
                     <div class="flex flex-space-between">
                       <p class="payment-section__total-text">Всего к оплате</p>
                       <div class="payment-section__total-box">
-                        <p class="payment-section__total-text">$83.4</p>
-                        <span>Экономия $64</span>
+                        <p class="payment-section__total-text" id="plan-total-price">$83.4</p>
+                        <span id="discount">Экономия $64</span>
                       </div>
                     </div>
                   </div>
@@ -293,7 +305,6 @@
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/scrollreveal.js"></script>
-    <script src="./js/smoothscroll.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
