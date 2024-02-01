@@ -72,6 +72,9 @@
     transform: translateY(-5px);
     box-shadow: 2px 2px 8px #d4d4d4;
   }
+  &__method-btn:focus {
+    outline: 1px solid #2ecc71;
+  }
   &__method-btn span {
     display: flex;
     align-items: center;
@@ -90,7 +93,7 @@
     padding: 16px 0 0 0;
   }
   &__info-box.focus {
-    box-shadow: 0px 2px 20px 0px #2ecc71;
+    box-shadow: 0px 2px 20px 0px #2ecc708f;
     outline: #2ecc71 solid 1px;
   }
   &__info-box .wrapper {
@@ -131,7 +134,7 @@
     font-weight: 700;
     line-height: normal; /* 227.778% */
   }
-    @media (max-width: 920px) {
+  @media (max-width: 920px) {
     &__total-text {
       font-size: 17px;
     }
